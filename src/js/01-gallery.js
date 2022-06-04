@@ -1,5 +1,9 @@
 // Add imports above this line
+
 import { galleryItems } from './gallery-items';
+import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from "simplelightbox";
+
 // Change code below this line
 const gallery = document.querySelector(".gallery");
 
@@ -15,9 +19,8 @@ function createImg(el) {
 gallery.insertAdjacentHTML("afterbegin", createImg(galleryItems));
 
  
-let galleryLightbox = new SimpleLightbox(".gallery a",
+new SimpleLightbox(".gallery a",
   {
-    
     captionsData: "alt",
     captionDelay: 250,
   });
